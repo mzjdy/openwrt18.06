@@ -8,7 +8,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=trojan
 PKG_VERSION:=1.15.1
-PKG_RELEASE:=6
+PKG_RELEASE:=1
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/trojan-gfw/trojan.git
@@ -66,3 +66,4 @@ define Package/trojan/install
 endef
 
 $(eval $(call BuildPackage,trojan))
+

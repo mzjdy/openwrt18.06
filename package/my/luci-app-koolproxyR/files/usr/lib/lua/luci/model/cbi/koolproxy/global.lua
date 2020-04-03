@@ -110,6 +110,7 @@ e = t:taboption("base", ListValue, "time_update", translate("定时更新"))
 for t = 0,23 do
 	e:value(t,translate("每天"..t.."点"))
 end
+e:value(0, translate("关闭"))
 e.default = 0
 e.rmempty = false
 e.description = translate(string.format("<font color=\"red\"><strong>定时更新订阅规则与Adblock Plus Hosts</strong></font>"))
@@ -393,7 +394,7 @@ function(o,a,i)
 end
 )
 
-t=o:section(TypedSection,"rss_rules",translate("技术支持"),translate("本软件由KPR提供技术支持"))
+t=o:section(TypedSection,"rss_rules",translate("技术支持"))
 t.anonymous = true
 t:append(Template("koolproxy/feedback"))
 return o
